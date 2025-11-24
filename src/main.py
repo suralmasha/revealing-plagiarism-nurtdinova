@@ -34,17 +34,9 @@ class TextImprover:
         pass
 
 
-class ReportMaker:
-
-    def generate_report(self, report):
-        pass
-
-    def generate_updated_report(self, original_text, rewritten_text, original_similarity, final_similarity):
-        pass
-
-
 def main():
     pass
+
 
 if __name__ == "__main__":
     main()
