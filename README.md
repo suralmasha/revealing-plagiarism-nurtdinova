@@ -28,26 +28,30 @@ venv\Scripts\activate  # На macOS: source .venv/bin/activate
 ### Установка зависимостей
 
 ```bash
-pip install -r requirements.txt
+poetry install
 ```
 
-## Этап 1. Примерная структура проекта
+## Cтруктура проекта
 
 ```
 revealing-plagiarism/
 │
 ├── README.md
 ├── .gitignore
-├── requirements.txt
+├── pyproject.toml
 ├── src/
+│   ├── assets
 │   ├── __init__.py 
-│   ├── text_processor.py    
-│   ├── revealer.py          
-│   ├── text-improver.py          
+│   ├── plagiarism-detector.py           
 │   ├── report-maker.py          
 │   └── main.py              
 ├── tests/
 │   ├── __init__.py
+│   ├── tbd.py
+│   ├── tbd.py
+│   └── ...
+├── docs/
+│   ├── index.rst
 │   ├── tbd.py
 │   ├── tbd.py
 │   └── ...
