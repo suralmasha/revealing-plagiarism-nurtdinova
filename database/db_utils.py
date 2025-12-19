@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS synonyms (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     word TEXT NOT NULL,
     synonym TEXT NOT NULL,
-    UNIQUE(word, synonym) -- Запретить дубликаты пар слово-синоним
+    UNIQUE(word, synonym)
 );
 """
 
@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS plagiarism_checks (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     original_text TEXT NOT NULL,
     checked_text TEXT NOT NULL,
-    similarity REAL NOT NULL CHECK(similarity >= 0.0 AND similarity <= 1.0), -- Ограничение на схожесть
+    similarity REAL NOT NULL CHECK(similarity >= 0.0 AND similarity <= 1.0),
     rewritten_text TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
