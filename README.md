@@ -47,29 +47,28 @@ $env:PYTHONPATH = "$pwd;" + $env:PYTHONPATH # на macOS: export PYTHONPATH=$pwd
 ```
 revealing-plagiarism/
 │
-├── README.md
+├── README.md # Краткое описание проекта
 ├── .gitignore
 ├── pyproject.toml
-├── database/
+├── database/ # Модуль для работы с БД
 │   ├── __init__.py
-│   ├── connection.py
-│   ├── db_utils.py
+│   ├── connection.py # Подключение к БД
+│   ├── db_utils.py # Логика работы с БД
 ├── src/
 │   ├── assets
-│       ├── corpus/
-│       ├── corpus_plagiarised/
-│   ├── utils
+│       ├── corpus/ # Корпус оригинальных текстов
+│       ├── corpus_plagiarised/ # Корпус сплагиаченных текстов (для выбора)
+│   ├── utils # Модуль для работы с синонимами
 │       ├── __init__.py
-│       ├── data_loader.py
+│       ├── data_loader.py # Загрузка синонимов
 │   ├── __init__.py 
-│   ├── plagiarism_detector.py           
+│   ├── plagiarism_detector.py #           
 │   ├── report_maker.py          
 │   └── main.py              
 ├── tests/
-│   ├── __init__.py
-│   ├── test_text_processor.py
-│   ├── test_plagiarism_revealer.py
-│   └── test_text_improver.py
+│   ├── test_text_processor.py # Тесты класса для обработки текста
+│   ├── test_plagiarism_revealer.py # Тесты класса для выявления плагиата
+│   └── test_text_improver.py # Тесты класса для улучшения текста
 ├── .gitignore
 ├── .pre-commit-config.yaml
 ├── poetry.lock
