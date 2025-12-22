@@ -1,10 +1,10 @@
 import logging
 from pathlib import Path
 
-from database.db_utils import create_database, load_synonyms_dict_from_db
-from src.plagiarism_detector import PlagiarismRevealer, TextImprover, TextProcessor
-from src.report_maker import Reporter
-from src.utils.data_loader import SynonymLoader
+from database.db_utils import create_database, load_synonyms_dict_from_db  # from database import ...
+from src.plagiarism_detector import PlagiarismRevealer, TextImprover, TextProcessor  # from .plagiarism_detector import ...
+from src.report_maker import Reporter  # from .report_maker import Reporter
+from src.utils.data_loader import SynonymLoader  # from .utils import SynonymLoader
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -19,6 +19,8 @@ def main():
     json_path = base_dir / 'src' / 'assets' / 'synonyms.json'
 
     path_to_check = base_dir / 'src' / 'assets' / 'corpus_plagiarised' / 'eco_3_pl.txt'
+    # Советую "собирать" путь вот так: Path(base_dir, 'src', 'assets', 'corpus_plagiarised', 'eco_3_pl.txt')
+    # Это абсолютный аналог вашего варианта, но зато так вы избежите путаницы из-за неоднозначности символа `/`.
 
     create_database()
     SynonymLoader.load_from_json(json_path)
@@ -56,13 +58,13 @@ def main():
     bound = 0.15
     if best_match['filename'] and best_match['score'] > bound:
         logger.info(f'\nНайдено сходство с документом: {best_match["filename"]}')
-        print(reporter.generate_plagiarism_report(best_match['data']))
+        print(reporter.generate_plagiarism_report(best_match['data']))  # Expected type 'dict', got 'int | None' instead
 
         synonyms = load_synonyms_dict_from_db()
         improver = TextImprover(synonyms)
         improved_text = improver.rewrite_text(text_to_check)
 
-        new_res = revealer.find_plagiarism(best_match['content'], improved_text, processor)
+        new_res = revealer.find_plagiarism(best_match['content'], improved_text, processor)  # Expected type 'str', got 'int | None' instead
 
         print(
             '\n'

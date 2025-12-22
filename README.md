@@ -39,13 +39,15 @@ poetry run python src/main.py
 
 ## Cтруктура проекта
 
+(Набор файлов я и так вижу. Нет описания структуры)
+
 ```
 revealing-plagiarism/
 │
 ├── README.md
 ├── .gitignore
 ├── pyproject.toml
-├── database/
+├── database/  (должен быть под src)
 │   ├── __init__.py
 │   ├── connection.py
 │   ├── db_utils.py
@@ -56,12 +58,12 @@ revealing-plagiarism/
 │   ├── utils
 │       ├── __init__.py
 │       ├── data_loader.py
-│   ├── __init__.py 
+│   ├── __init__.py   (не нужен. src - это не модуль)
 │   ├── plagiarism_detector.py           
 │   ├── report_maker.py          
 │   └── main.py              
 ├── tests/
-│   ├── __init__.py
+│   ├── __init__.py  (не нужен. tests - это не модуль)
 │   ├── test_text_processor.py
 │   ├── test_plagiarism_revealer.py
 │   └── test_text_improver.py

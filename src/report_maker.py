@@ -8,7 +8,7 @@ class Reporter:
     Generates reports for plagiarism detection and text improvement.
     """
 
-    def generate_plagiarism_report(self, plag_report: dict) -> str:
+    def generate_plagiarism_report(self, plag_report: dict) -> str:  # Method 'generate_plagiarism_report' may be 'static'
         """
         Args:
             plag_report (dict): Result from PlagiarismRevealer.
@@ -26,7 +26,7 @@ class Reporter:
         ]
         return '\n'.join(report)
 
-    def generate_rewrite_report(self, rewritten: str, old_sim: float, new_sim: float) -> str:
+    def generate_rewrite_report(self, rewritten: str, old_sim: float, new_sim: float) -> str:  # Method 'generate_rewrite_report' may be 'static'
         """
         Args:
             rewritten (str): Text after improvement.

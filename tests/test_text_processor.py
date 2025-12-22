@@ -3,7 +3,7 @@ Checks Text Processor functionality.
 """
 
 import pytest
-from src.plagiarism_detector import TextProcessor
+from src.plagiarism_detector import TextProcessor  # from plagiarism_detector import TextImprover
 
 
 class TestTextProcessor:

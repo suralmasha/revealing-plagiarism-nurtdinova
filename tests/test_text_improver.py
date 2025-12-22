@@ -3,7 +3,7 @@ Checks Text Improver functionality.
 """
 
 import pytest
-from src.plagiarism_detector import TextImprover
+from src.plagiarism_detector import TextImprover  # from plagiarism_detector import TextImprover
 
 
 class TestTextImprover:

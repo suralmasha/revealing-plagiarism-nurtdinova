@@ -58,7 +58,7 @@ class PlagiarismRevealer:
     Logic for detecting similarities between texts.
     """
 
-    def calculate_similarity(self, orig_text: str, plag_text: str) -> float:
+    def calculate_similarity(self, orig_text: str, plag_text: str) -> float:  # Method 'calculate_similarity' may be 'static'
         """
         Calculate cosine similarity between two raw texts.
 
