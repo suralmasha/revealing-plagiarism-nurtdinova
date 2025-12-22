@@ -2,7 +2,7 @@ import json
 import logging
 from pathlib import Path
 
-from database.db_utils import add_synonym_pair
+from database import add_synonym_pair
 
 logger = logging.getLogger(__name__)
 

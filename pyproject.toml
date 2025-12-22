@@ -6,7 +6,7 @@ authors = [
     {name = "Sofia Nurtdinova", email = "asnurtdinova2@gmail.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.12,<4.0"
+requires-python = "==3.12"
 dependencies = [
     "nltk==3.9.1", # для обработки языка
     "textdistance==4.6.0", # для подсчета расстояний
@@ -22,7 +22,7 @@ pre-commit = "4.2.0"
 
 [tool.ruff]
 line-length = 120
-target-version = 'py311'
+target-version = 'py312'
 exclude = [
     '**/tests/**',
 ]
