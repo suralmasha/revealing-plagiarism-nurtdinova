@@ -1,4 +1,4 @@
-"""Database module for plagiarism detector."""
+"""Loading synonyms module for plagiarism detector."""
 
 from .data_loader import SynonymLoader
 
